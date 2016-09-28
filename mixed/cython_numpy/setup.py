@@ -1,8 +1,7 @@
-from distutils.core import setup, Extension
-from Cython.Distutils import build_ext
+from distutils.core import setup
+from Cython.Build import cythonize
 
 setup(
-    cmdclass={'build_ext': build_ext},
-    ext_modules=[Extension("apply", ["apply.pyx"]),
-                 Extension("apply_py", ["apply_py.pyx"])]
+    name = "Integration",
+    ext_modules = cythonize("*.pyx"),
 )
