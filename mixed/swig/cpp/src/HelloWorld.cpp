@@ -18,9 +18,9 @@ void HelloWorld:: compute()
 }
 
 void HelloWorld::set(double r1_, double r2_)
-{ 
+{
     r1 = r1_;
-    r2 = r2_; 
+    r2 = r2_;
     compute();  // compute s
 }
 
