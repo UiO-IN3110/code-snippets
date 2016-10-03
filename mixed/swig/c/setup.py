@@ -1,16 +1,11 @@
-import os
 from distutils.core import setup, Extension
 
 name = "hw"    # name of the module
 version = 1.0  # the module's version number
 
-swig_cmd = "swig -python -Isrc %s.i" % name
-
-print "running SWIG:", swig_cmd
-os.system(swig_cmd)
-
-sources = ["src/hw.c", "hw_wrap.c"]
 setup(name=name, version=version,
-      ext_modules=[Extension('_' + name, # SWIG requires _
-                   sources, include_dirs=[os.pardir])
+      # distutils detects .i files and compiles them automatically
+      ext_modules=[Extension(name='_hw', # SWIG requires _ as a prefix for the module name
+                             sources=["hw.i"],
+                             include_dirs=['src'])
     ])
