@@ -3,6 +3,7 @@ Building with distutils
 
 ```bash
 python setup.py build_ext
+python setup.py install --install-platlib=.
 ```
 
 Test with
