@@ -1,4 +1,4 @@
 from hw import *
 
-result = hw3(1.0, 0)
+result = hw1(1.0, 0)
 print(result)

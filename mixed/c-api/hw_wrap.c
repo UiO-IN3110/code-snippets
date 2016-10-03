@@ -1,20 +1,20 @@
 #include "Python.h"
 #include "src/hw.h"
 
-static PyObject *_wrap_hw3(PyObject *self, PyObject *args) {
+static PyObject *_wrap_hw1(PyObject *self, PyObject *args) {
   PyObject *resultobj;
   double arg1, arg2, result;
 
-  PyArg_ParseTuple(args, (char *)"dd:hw3", &arg1, &arg2);
+  PyArg_ParseTuple(args, (char *)"dd:hw1", &arg1, &arg2);
 
-  hw3(arg1, arg2, &result);
+  hw1(arg1, arg2, &result);
 
   resultobj = PyFloat_FromDouble(result);
   return resultobj;
 }
 
 static PyMethodDef HwMethods[] = {
-    {"hw3", _wrap_hw3, METH_VARARGS, "Hello world."},
+    {"hw1", _wrap_hw1, METH_VARARGS, "Hello world."},
     {NULL, NULL, 0, NULL}        /* Sentinel */
 };
 
