@@ -3,11 +3,11 @@
 
 static PyObject *_wrap_hw1(PyObject *self, PyObject *args) {
   PyObject *resultobj;
-  double arg1, arg2, result;
+  double r1, r2, result;
 
-  PyArg_ParseTuple(args, (char *)"dd:hw1", &arg1, &arg2);
+  PyArg_ParseTuple(args, (char *)"dd:hw1", &r1, &r2);
 
-  hw1(arg1, arg2, &result);
+  hw1(r1, r2, &result);
 
   resultobj = PyFloat_FromDouble(result);
   return resultobj;

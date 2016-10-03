@@ -10,7 +10,10 @@
 %include "typemaps.i"
 
 /* list functions to be interfaced: */
-%apply double *OUTPUT { double* s }  /* apply rule that defines the argument *s as an output variable */
-void hw1(double r1, double r2, double *s);
+void hw1(double r1, double r2, double *OUTPUT); /* OUTPUT indicates an return variable */
+
+/* Alternative: */
+/* %apply double *OUTPUT { double* s }  */ /* apply rule that defines the argument *s as an output variable */
+/* void hw1(double r1, double r2, double *s); */
 
 void hw2(double r1, double r2);
