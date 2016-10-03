@@ -28,7 +28,7 @@ swig -python -c++ -Isrc helloworld.i
 #Compile with:
 
 ```bash
-g++ -std=c++0x -Isrc -fPIC -O -c $(pkg-config --cflags --libs python3)\
+g++ -Isrc -fPIC -c $(pkg-config --cflags --libs python3)\
          src/HelloWorld.cpp src/HelloWorld2.cpp helloworld_wrap.cxx
-g++ -std=c++0x -shared -o _helloworld.so HelloWorld.o HelloWorld2.o helloworld_wrap.o
+g++ -shared -o _helloworld.so HelloWorld.o HelloWorld2.o helloworld_wrap.o
 ```
