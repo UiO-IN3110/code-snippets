@@ -14,4 +14,4 @@
 
 %extend HelloWorld {
     void print_() { self->message(std::cout); }
-    }
+}

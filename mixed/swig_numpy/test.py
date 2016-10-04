@@ -2,7 +2,7 @@ import simple
 import numpy
 from time import time
 
-a = simple.create_list(1000000)
+a = simple.arange(1000000)
 
 numpy_start = time()
 print("Numpy says:", numpy.dot(a,a))

@@ -6,7 +6,7 @@ double dot(int n, double *a, int m, double *b){
   return sum;
 }
 
-void create_list(int size, double *arr){
+void arange(int size, double *arr){
   for (int i=0; i<size; i++)
     arr[i] = i;
 }
